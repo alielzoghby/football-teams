@@ -107,10 +107,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         th, td {
             padding: 8px;
             border: 1px solid #ccc;
+            text-align: center;
+
         }
         
         th {
             background-color: #f2f2f2;
+        
         }
         
         form {
@@ -172,7 +175,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <tr>
                 <th>#</th>
                 <th>Player Name</th>
-                <th>Actions</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -181,15 +185,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <td><?php echo $index + 1; ?></td>
                     <td>
                         <span class="player-name"><?php echo $player['player_name']; ?></span>
-                        <form class="hidden" action="" method="POST">
-                            <input type="hidden" name="player_id" value="<?php echo $player['id']; ?>">
+                        
+                    </td>
+                    <td>
+                        <form action="" method="POST">
+                            <input  class="hidden" type="hidden" name="player_id" value="<?php echo $player['id']; ?>">
                             <input type="text" name="player_name" value="<?php echo $player['player_name']; ?>">
                             <button id="edit_player" type="submit" name="edit_player">Update</button>
                         </form>
                     </td>
                     <td>
                         <form action="" method="POST">
-                            <button class="edit-button">Edit</button>
                             <input type="hidden" name="player_id" value="<?php echo $player['id']; ?>">
                             <button type="submit" name="delete_player">Delete</button>
                         </form>
@@ -207,26 +213,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <a href="delete_team.php?team_id=<?php echo $teamId; ?>">Delete Team</a>
 <a href="add_player.php?team_id=<?php echo $teamId; ?>">Add Player</a>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var editButtons = document.querySelectorAll('.edit-button');
-
-        editButtons.forEach(function(button) {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                var row = this.closest('tr');
-                var playerName = row.querySelector('.player-name');
-                var form = row.querySelector('form.hidden');
-                var editButton = row.querySelector('.edit-button');
-                var updateButton = row.querySelector('.update-button');
-
-                playerName.classList.add('hidden');
-                form.classList.remove('hidden');
-                editButton.classList.add('hidden');
-                updateButton.classList.remove('hidden');
-            });
-        });
-    });
-</script>
 </body>
 </html>
