@@ -127,11 +127,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             border-radius: 5px;
         }
         
-        button[type="submit"],.edit-button {
+        button[type="submit"] {
+            display: inline-block;
             padding: 5px 10px;
-            background-color: #28a745;
+            color: #fff;
+            border: none;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            background-color: #dc3545;
+
         }
-        
+        #edit_player {
+            background-color: #6c757d !important;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
         .player-list {
             background-color: #f9f9f9;
             padding: 10px;
@@ -185,7 +197,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <td><?php echo $index + 1; ?></td>
                     <td>
                         <span class="player-name"><?php echo $player['player_name']; ?></span>
-                        
+                            
                     </td>
                     <td>
                         <form action="" method="POST">

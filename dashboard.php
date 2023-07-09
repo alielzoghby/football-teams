@@ -73,8 +73,9 @@ $stmt->fetchAll(PDO::FETCH_ASSOC);
         display: block;
         text-align: center;
         margin-top: 10px;
-        padding: 5px 10px;
-        background-color: #8fce00;
+        padding: 10px 10px;
+        color:white;
+        background-color: #00B89F;
         border-radius: 2rem;
       }
 
