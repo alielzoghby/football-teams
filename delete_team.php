@@ -13,7 +13,6 @@ require_once "db.php";
 
 
 if (!isset($_GET['team_id'])) {
-
     exit();
 }
 
@@ -86,9 +85,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>Delete Team</h1>
     <form action="" method="POST">
         <p>Are you sure you want to delete this team?</p>
+        <a href="team_details.php?team_id=<?php echo $teamId; ?>" class="button">Team Details</a>
         <button type="submit">Delete Team</button>
     </form>
-    
-    <a href="team_details.php?team_id=<?php echo $teamId; ?>" class="button">Team Details</a>
+
 </body>
 </html>

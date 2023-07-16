@@ -23,6 +23,7 @@ $name = $_SESSION['name'] ?? "";
 $email = $_SESSION['email'] ?? "";
 $password = $_SESSION['password'] ?? "";
 $confirmPassword = $_SESSION['confirmPassword'] ?? "";
+
 $passwordError = $_SESSION['password_error'] ?? "";
 $emailError = $_SESSION['email_error'] ?? "";
 $dublecatEmail = $_SESSION['dublecat_Email'] ?? "";

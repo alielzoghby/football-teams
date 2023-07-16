@@ -79,14 +79,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         label {
             display: block;
             margin-bottom: 10px;
-            text-align: left;
+            text-align: center;
             font-weight: bold;
         }
         
         input[type="text"],
         select {
             padding: 10px;
-            width: 100%;
+            width: 50%;
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
@@ -103,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         button[type="submit"]{
             display: block;
-            width:100%;
+            width:50%;
             margin-bottom:10px;
 
         }
@@ -123,6 +123,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             color: red;
             margin-bottom: 10px;
             text-align: center;
+        }
+
+        a.button {
+            width:22.8%;
+            display:inline-block;
+            text-align: center;
+            
+        }
+        .cont{
+            display:flex;
+            gap:5px;
+            justify-content: center;
+
         }
     </style>
 </head>
@@ -158,7 +171,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit">Update Team</button>
     </form>
     
+    <div class="cont">
     <a href="team_details.php?team_id=<?php echo $teamId; ?>" class="button">Team Details</a>
     <a href="delete_team.php?team_id=<?php echo $teamId; ?>" class="button">Delete Team</a>
+    </div>
 </body>
 </html>

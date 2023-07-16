@@ -72,11 +72,12 @@ $stmt->fetchAll(PDO::FETCH_ASSOC);
       .create-team-link {
         display: block;
         text-align: center;
-        margin-top: 10px;
+        margin: 20px auto;
         padding: 10px 10px;
         color:white;
         background-color: #00B89F;
         border-radius: 2rem;
+        width:50%;        
       }
 
       .logout-link {

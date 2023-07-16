@@ -64,20 +64,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         h1 {
             color: #333;
+            text-align: center;
+
         }
         
         form {
             margin-top: 20px;
+            text-align: center;
+
         }
         
         label {
             display: block;
             margin-bottom: 10px;
+            text-align: center;
+
         }
         
         input[type="text"] {
             padding: 5px;
             width: 200px;
+
         }
         
         button[type="submit"],
@@ -90,6 +97,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             text-decoration: none;
             border-radius: 5px;
             cursor: pointer;
+
+
         }
         
         .error {
@@ -111,8 +120,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="text" id="player_name" name="player_name" required>
         
         <button type="submit">Add Player</button>
+        <br>
+        <a href="team_details.php?team_id=<?php echo $teamId; ?>" class="button" style="margin-top:8px;">Team Details</a>
+
     </form>
     
-    <a href="team_details.php?team_id=<?php echo $teamId; ?>" class="button" style="margin-top:8px;">Team Details</a>
 </body>
 </html>
